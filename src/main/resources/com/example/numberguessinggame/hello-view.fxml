@@ -28,13 +28,14 @@
       </MenuBar>
    </top>
    <center>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="70.0" BorderPane.alignment="CENTER">
+      <VBox fx:id="vb" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Number Guessing Game" textFill="#16ddb2">
                <font>
                   <Font name="Curlz MT" size="44.0" />
                </font>
             </Label>
+            <Region prefHeight="88.0" prefWidth="600.0" />
             <Button mnemonicParsing="false" onAction="#onClick" text="Enter">
                <graphic>
                   <TextField fx:id="tf" />
