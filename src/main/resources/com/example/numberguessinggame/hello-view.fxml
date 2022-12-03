@@ -9,14 +9,17 @@
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Menu">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem mnemonicParsing="false" onAction="#onRestart" text="Restart" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu mnemonicParsing="false" text="Range">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+                  <MenuItem mnemonicParsing="false" onAction="#onChangeBounds10" text="1-10" />
+                  <MenuItem mnemonicParsing="false" onAction="#onChangeBounds20" text="1-20" />
+                  <MenuItem mnemonicParsing="false" onAction="#onChangeBounds50" text="1-50" />
+              <MenuItem mnemonicParsing="false" onAction="#onChangeBounds100" text="1-100" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">

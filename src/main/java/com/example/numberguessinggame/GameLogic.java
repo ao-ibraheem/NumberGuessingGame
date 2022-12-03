@@ -8,10 +8,12 @@ import java.util.Random;
 public class GameLogic {
 
     int randomNumber;
+    int bound = 10;
 
-    public void setRandomNumber() {
+    public void setRandomNumber(int bound) {
+        this.bound = bound;
         Random random = new Random();
-        randomNumber = random.nextInt(50);
+        randomNumber = random.nextInt(bound);
         System.out.println(randomNumber);
     }
      public boolean isNum(int guess){
@@ -23,18 +25,20 @@ public class GameLogic {
         if(isNum(guess)){
             System.out.println("You win");
             System.out.println("Game will reset");
-            setRandomNumber();
+            setRandomNumber(bound);
             Popup popup = new Popup();
             Label label = new Label("You've guessed it right!");
             label.setStyle("-fx-background-color: pink;");
             popup.getContent().add(label);
             label.setMinWidth(80);
             label.setMinHeight(50);
-
+        }
+        else{
+            System.out.println("Wrong answer try again");
         }
      }
 
     public GameLogic() {
-        setRandomNumber();
+        setRandomNumber(bound);
     }
 }

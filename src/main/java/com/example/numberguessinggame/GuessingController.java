@@ -27,4 +27,26 @@ public class GuessingController {
         logic.win(num);
 
     }
+
+    @FXML
+    protected void onRestart(){
+        logic.setRandomNumber(10);
+    }
+
+    @FXML
+    protected void onChangeBounds10(){
+        logic.setRandomNumber(11);
+    }
+    @FXML
+    protected void onChangeBounds20(){
+        logic.setRandomNumber(21);
+    }
+    @FXML
+    protected void onChangeBounds50(){
+        logic.setRandomNumber(51);
+    }
+    @FXML
+    protected void onChangeBounds100(){
+        logic.setRandomNumber(101);
+    }
 }
